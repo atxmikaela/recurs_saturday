@@ -35,16 +35,14 @@ console.log(x[0] === y[0]) // true
 
 
 function deepDup(arr) {
-<<<<<<< HEAD
   // Your code here
 
-  
-=======
+
     let result = []
-  
+
     for (let i = 0; i < arr.length; i++){
       let item = arr[i]
-  
+
       if (Array.isArray(item)){
         result.push(deepDup(item))
       }
@@ -53,7 +51,6 @@ function deepDup(arr) {
       }
     }
     return result
->>>>>>> refs/remotes/origin/main
 }
 
 
