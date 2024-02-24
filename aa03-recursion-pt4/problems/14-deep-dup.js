@@ -1,5 +1,5 @@
 /***********************************************************************
-A shallow copy makes a copy of the reference to X (an array), into Y.
+A shallow copy (you mean slice?) makes a copy of the reference to X (an array), into Y.
 If we were to say something like this for example:
 let x = [ [1], [2, 3] ];
 let y = x.slice();
@@ -35,7 +35,19 @@ console.log(x[0] === y[0]) // true
 
 
 function deepDup(arr) {
-  // Your code here 
+    let result = []
+  
+    for (let i = 0; i < arr.length; i++){
+      let item = arr[i]
+  
+      if (Array.isArray(item)){
+        result.push(deepDup(item))
+      }
+      else {
+        result.push(item)
+      }
+    }
+    return result
 }
 
 
