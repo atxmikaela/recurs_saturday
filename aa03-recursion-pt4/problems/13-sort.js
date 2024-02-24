@@ -22,7 +22,10 @@ sort([]); // []
 ***********************************************************************/
 
 function sort(nums, sorted = []) {
-    // Your code here 
+    // Your code here
+    if (nums.length === 0){
+        return
+    }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
